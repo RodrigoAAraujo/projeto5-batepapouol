@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+/*------------Header and Footer---------------*/
+
+header{
+    top: 0; left: 0;
+}
+footer{
+    bottom: 0; left:0;
+}
+header, footer{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+button, input{
+    background-color: white;
+}
+header ion-icon{
+    font-size: 42px;
+}
+footer ion-icon {
+    font-size: 26px;
+}
+footer input{
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+
