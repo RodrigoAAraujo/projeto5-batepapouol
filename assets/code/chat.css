@@ -16,6 +16,7 @@ header{
 }
 footer{
     bottom: 0; left:0;
+    border-top: 1px rgba(#868686, 1) solid;
 }
 header, footer{
     position: fixed;
@@ -40,5 +41,64 @@ footer input{
     font-weight: 500;
     font-style: italic;
 }
+footer form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
+/*Aside*/
+
+aside{
+    position: fixed;
+    top: 0; right: 0;
+    height: 100vh;
+    z-index: 2;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 17px;
+    max-width: 259px;
+}
+aside h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18,75px;
+
+}
+aside p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+}
+aside > *{
+    margin: 10px 0px;
+}
+
+aside ul{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+aside li{
+    display: flex;
+    align-items: center;
+    margin: 4px 0px;
+}
+aside ion-icon{
+    font-size: 20px;
+    margin-right: 6px;
+}
+
+
+
+
+
+aside .aside-on{
+    right: 0;
+}

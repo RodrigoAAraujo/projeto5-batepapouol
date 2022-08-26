@@ -18,15 +18,37 @@
 
         </main>
         <aside>
+            <h1>Escolha um contato para enviar mensagens:</h1>
+            <ul>
+                <li>
+                    <ion-icon name="people"></ion-icon>
+                    <p>Todos</p>
+                </li>
+
+            </ul>
+            <h1>Escolha a visibilidade:</h1>
+            <ul>
+                <li data-identifier="visibility">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    <p>Público</p>
+                </li>
+                <li data-identifier="visibility">
+                    <ion-icon name="lock-open"></ion-icon>
+                    <p>Reservadamente</p>
+                </li>
+            </ul>
             
         </aside>
         <footer>
-            <input type="text" placeholder="Escreva aqui...">
-            <button type="submit" onclick="sendMessage()">
-                <ion-icon name="paper-plane-outline"></ion-icon>
-            </button>
+            <form action="sendMessage()">
+                <input type="text" placeholder="Escreva aqui...">
+                <button type="submit">
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                </button>
+            </form>
         </footer>
 
         <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        <script src="./assets/code/chat.js"></script>
     </body>
 </html>
