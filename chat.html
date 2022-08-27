@@ -23,34 +23,38 @@
 
             </ul>
         </main>
-        <aside class="hidden">
+        <aside class="noSee">
             <h1>Escolha um contato para enviar mensagens:</h1>
-            <ul>
-                <li>
-                    <ion-icon name="people"></ion-icon>
-                    <p>Todos</p>
-                </li>
+            <ul class="person">
+
             </ul>
             <h1>Escolha a visibilidade:</h1>
-            <ul>
-                <li data-identifier="visibility">
-                    <ion-icon name="lock-closed"></ion-icon>
-                    <p>Público</p>
+            <ul class="style">
+                <li data-identifier="visibility" class="selected" onclick="selectStyle(this)">
+                    <div>
+                        <ion-icon name="lock-closed"></ion-icon>
+                        <p>Público</p>
+                    </div>
+                    <ion-icon name="checkmark"></ion-icon>
                 </li>
-                <li data-identifier="visibility">
-                    <ion-icon name="lock-open"></ion-icon>
-                    <p>Reservadamente</p>
+                <li data-identifier="visibility" onclick="selectStyle(this)">
+                    <div>
+                        <ion-icon name="lock-open"></ion-icon>
+                        <p>Reservadamente</p>
+                    </div>
+                    <ion-icon name="checkmark"></ion-icon>
                 </li>
             </ul>
-            
         </aside>
         <footer>
-            <form action="sendMessage()">
-                <input type="text" placeholder="Escreva aqui...">
-                <button type="submit">
-                    <ion-icon name="paper-plane-outline"></ion-icon>
-                </button>
-            </form>
+            <div>
+                <input type="text" placeholder="Escreva aqui..." required>
+                <h5></h5>
+            </div>
+            <button type="submit" onclick="sendMessage()">
+                <ion-icon name="paper-plane-outline"></ion-icon>
+            </button>
+            
         </footer>
         <div class="fogger hidden" onclick="hideSidebar()"></div>
 
