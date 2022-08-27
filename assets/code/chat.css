@@ -4,9 +4,11 @@
     box-sizing: border-box;
 }
 body{
-
     font-family: 'Roboto', sans-serif;
     width: 100%;
+}
+.hidden{
+    display: none;
 }
 
 /*------------Header and Footer---------------*/
@@ -22,6 +24,8 @@ header, footer{
     position: fixed;
     height: 80px;
     width: 100%;
+    background-color: white;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,13 +51,20 @@ footer form{
     justify-content: space-between;
     align-items: center;
 }
+header div{
+    display: flex;
+    align-items: center;
+}
+header h4{
+    font-size: 18px;
+    font-weight: 500;
+}
 
-
-/*Aside*/
+/*----------Aside-------------*/
 
 aside{
     position: fixed;
-    top: 0; right: 0;
+    top: 0; right: -256px;
     height: 100vh;
     z-index: 2;
     background-color: white;
@@ -95,10 +106,56 @@ aside ion-icon{
     margin-right: 6px;
 }
 
-
-
-
-
-aside .aside-on{
-    right: 0;
+.aside-on{
+    transition: 0.5s;
+    top: 0; right: 0; 
 }
+
+
+/*--------main---------*/
+
+main{
+    padding: 83px 0px;
+    background-color: #f8f8f8;
+}
+
+main li{
+    display: flex;
+    align-items: center;
+    margin: 4px 0px;
+    padding: 10px 8px;
+}
+
+main .message{
+    background-color: white;
+}
+main .private_message{
+    background-color: #FFDEDE;
+}
+main .status{
+    background-color: #DCDCDC;
+}
+
+main li > *{
+    margin: 0px 4px;
+}
+
+main li h2{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.40px;
+}
+main li h2 strong {
+    font-weight: 700;
+}
+main h2 em {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #aaaaaa;
+}
+main li span{
+    margin: 0px 6px;
+}
+
+

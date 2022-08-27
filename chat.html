@@ -11,20 +11,25 @@
     <body>
         <header>    
             <img src="./assets/images/logoUol.png" alt="Logo do site">
-            <ion-icon name="people"></ion-icon onclick="showSidebar()">
+            <div>
+                <ion-icon name="person-circle-outline"></ion-icon>
+                <h4></h4>
+            </div>
+            <ion-icon name="people" onclick="showSidebar()"></ion-icon>
 
         </header>
         <main>
+            <ul>
 
+            </ul>
         </main>
-        <aside>
+        <aside class="hidden">
             <h1>Escolha um contato para enviar mensagens:</h1>
             <ul>
                 <li>
                     <ion-icon name="people"></ion-icon>
                     <p>Todos</p>
                 </li>
-
             </ul>
             <h1>Escolha a visibilidade:</h1>
             <ul>
@@ -47,7 +52,9 @@
                 </button>
             </form>
         </footer>
+        <div class="fogger hidden" onclick="hideSidebar()"></div>
 
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
         <script src="./assets/code/chat.js"></script>
     </body>
