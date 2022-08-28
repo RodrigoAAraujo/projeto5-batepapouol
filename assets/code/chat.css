@@ -44,8 +44,11 @@ footer ion-icon {
     font-size: 26px;
 }
 footer input{
-    font-size: 18px;
+    font-size: 19px;
+    width: 100%;
     font-weight: 500;
+}
+footer input::placeholder{
     font-style: italic;
 }
 footer form{
@@ -54,6 +57,18 @@ footer form{
     justify-content: space-between;
     align-items: center;
 }
+footer h5{
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #505050;
+}
+
+footer div{
+    width: 80%;
+    max-width: 400px;
+}
+
 header div{
     display: flex;
     align-items: center;

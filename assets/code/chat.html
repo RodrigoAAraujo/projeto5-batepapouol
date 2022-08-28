@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Bate Papo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-------css Styles------->
+        <link rel="stylesheet" href="./reset.css">
+        <link rel="stylesheet" href="./chat.css">
+    </head>
+    <body>
+        <header>    
+            <img src="../images/logoUol.png" alt="Logo do site">
+            <div>
+                <ion-icon name="person-circle-outline"></ion-icon>
+                <h4></h4>
+            </div>
+            <ion-icon name="people" onclick="showSidebar()"></ion-icon>
+
+        </header>
+        <main>
+            <ul>
+
+            </ul>
+        </main>
+        <aside class="noSee">
+            <h1>Escolha um contato para enviar mensagens:</h1>
+            <ul class="person">
+
+            </ul>
+            <h1>Escolha a visibilidade:</h1>
+            <ul class="style">
+                <li data-identifier="visibility" class="selected" onclick="selectStyle(this)">
+                    <div>
+                        <ion-icon name="lock-closed"></ion-icon>
+                        <p>Público</p>
+                    </div>
+                    <ion-icon name="checkmark"></ion-icon>
+                </li>
+                <li data-identifier="visibility" onclick="selectStyle(this)">
+                    <div>
+                        <ion-icon name="lock-open"></ion-icon>
+                        <p>Reservadamente</p>
+                    </div>
+                    <ion-icon name="checkmark"></ion-icon>
+                </li>
+            </ul>
+        </aside>
+        <footer>
+            <div>
+                <input type="text" placeholder="Escreva aqui..." required>
+                <h5></h5>
+            </div>
+            <button type="submit" onclick="sendMessage()">
+                <ion-icon name="paper-plane-outline"></ion-icon>
+            </button>
+            
+        </footer>
+        <div class="fogger hidden" onclick="hideSidebar()"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        <script src="./chat.js"></script>
+    </body>
+</html>

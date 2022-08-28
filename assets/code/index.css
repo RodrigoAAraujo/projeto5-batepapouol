@@ -7,6 +7,9 @@ body{
     font-family: 'Roboto', sans-serif;
     width: 100%;
 }
+.hidden{
+    display: none;
+}
 
 /*---------------Main-Settings-----------*/
 
@@ -21,6 +24,7 @@ main{
 
 img{
     width: 130px;
+    margin: 20px 0px;
 }
 input{
     background-color: white;

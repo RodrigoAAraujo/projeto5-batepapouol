@@ -34,7 +34,7 @@ function renderMessages(response){
             </li>
             `
         }
-        else if (element.type =="private_message" && element.to == me){
+        else if (element.type =="private_message" && (element.to == me || element.from == me)){
             messagesBlock.innerHTML += `
             <li class="${element.type}">
                 <h2><em>(${element.time})</em><span><strong>${element.from}</strong> reservadamente para <strong>${element.to}</strong>:</span>${element.text}</h2>
@@ -45,7 +45,6 @@ function renderMessages(response){
     scroll()
 }
 function errorMessages(error){
-    alert(error)
 }
 
 function getParticipants(){
@@ -139,7 +138,6 @@ function renderParticipants(response){
     sendToWho()
 }
 function errorParticipants(error){
-    alert(error)
 }
 
 /*----Keep On--- */
@@ -152,7 +150,8 @@ function login(){
 function ok(response){
 }
 function errorLogin(error){
-    alert(error)
+    alert("O serviço deu problema:" + error.response.status)
+    window.location.replace("./index.html")
 }
 
 function keepOn(){
@@ -218,32 +217,31 @@ document.addEventListener("keypress", function(e){
 })
 
 function sendMessage(){
-    let styleSelectedInMoment = document.querySelector("aside .style .selected p")
-    let PersonSelected = participantsBlock.querySelector(".selected p")
-    let style = ""
-    if(styleSelectedInMoment.innerHTML === "Público"){
-        style = "message"
-    }else if((styleSelectedInMoment.innerHTML === "Reservadamente")){
-        style = "private_message"
+    if(textInsert.value !== ""){
+        let styleSelectedInMoment = document.querySelector("aside .style .selected p")
+        let PersonSelected = participantsBlock.querySelector(".selected p")
+        let style = ""
+        if(styleSelectedInMoment.innerHTML === "Público"){
+            style = "message"
+        }else if((styleSelectedInMoment.innerHTML === "Reservadamente")){
+            style = "private_message"
+        }
+        let message = {
+            from : me,
+            to: PersonSelected.innerHTML,
+            text : textInsert.value,
+            type : style
+        }
+        let messageSent = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", message)
+        textInsert.value = ""
+        messageSent.then(MessageSuccess)
+        messageSent.catch(MessageUnsuccessfull)
     }
-    let message = {
-        from : me,
-        to: PersonSelected.innerHTML,
-        text : textInsert.value,
-        type : style
-    }
-    let messageSent = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", message)
-    textInsert.value = ""
-    messageSent.then(MessageSuccess)
-    messageSent.catch(MessageUnsuccessfull)
-
 }
 function MessageSuccess(response){
-
-    console.log(response)
 }
 function MessageUnsuccessfull(error){
-    console.log(error)
+    alert("A mensagem não foi enviada, tente novamante!!")
 }
 
 
