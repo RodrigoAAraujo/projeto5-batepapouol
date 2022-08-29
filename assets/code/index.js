@@ -16,7 +16,6 @@ function login(){
 }
 
 function goChat(){
-    console.log("vuvyu")
     window.location.replace("./assets/code/chat.html");
 }
 
