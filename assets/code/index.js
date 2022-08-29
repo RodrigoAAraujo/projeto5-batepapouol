@@ -16,6 +16,7 @@ function login(){
 }
 
 function goChat(){
+    console.log("vuvyu")
     window.location.replace("./assets/code/chat.html");
 }
 
@@ -26,7 +27,6 @@ function goWrong(error){
     }else{
         alert("O sistema deu um erro, tente novamente!!")
         window.location.reload()
-
     }
 }
 

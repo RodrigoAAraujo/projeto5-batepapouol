@@ -114,6 +114,11 @@ aside ul{
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
+    max-height: 60%;
+}
+aside .person{
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 aside li{
     width: 100%;

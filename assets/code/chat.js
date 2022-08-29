@@ -151,7 +151,7 @@ function ok(response){
 }
 function errorLogin(error){
     alert("O serviço deu problema:" + error.response.status)
-    window.location.replace("./index.html")
+    window.location.replace("../../index.html")
 }
 
 function keepOn(){
